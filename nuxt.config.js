@@ -41,16 +41,14 @@ export default {
     'nuxt-content-algolia',
   ],
   snipcart: {
-    key: process.env.key,
+    key: process.env.SNIPCART_KEY,
 
     attributes: [
       ['data-config-modal-style', 'side'],
       // ['data-config-add-product-behavior', 'none']
     ],
   },
-  ngrok: {
-    authtoken: process.env.ngrok,
-  },
+
   styleResources: {
     scss: ['~/assets/scss/*.scss'],
   },
