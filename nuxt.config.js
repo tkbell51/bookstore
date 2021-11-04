@@ -36,7 +36,6 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/style-resources',
     '@nuxtjs/fontawesome',
-    '@nuxtjs/ngrok',
     '@nuxtjs/snipcart',
     'nuxt-content-algolia',
   ],
