@@ -3,27 +3,28 @@
     <ais-configure :attributesToSnippet="['bodyPlainText']" :hits-per-page.camel="5">
       <ais-autocomplete v-on-clickaway="onClickOutside">
         <div slot-scope="{ currentRefinement, indices, refine }">
-          <input
-            type="search"
-            ref="searchInput"
-            :placeholder="searchPlaceholder"
-            class="w-full py-2 px-3"
-            :value="currentRefinement"
-            @input="refine($event.currentTarget.value)"
-            autocomplete="off"
-            @focus="showResults = true"
-            @keydown.up.prevent="highlightPrevious"
-            @keydown.down.prevent="highlightNext(indices[0].hits.length)"
-            @keydown.enter="goToDoc(indices)"
-          />
+          <div class="search__container">
+            <svg-icon class="search__icon" name="search" />
+            <input
+              type="search"
+              ref="searchInput"
+              :placeholder="searchPlaceholder"
+              class="w-full py-2 px-3"
+              :value="currentRefinement"
+              @input="refine($event.currentTarget.value)"
+              autocomplete="off"
+              @focus="showResults = true"
+              @keydown.up.prevent="highlightPrevious"
+              @keydown.down.prevent="highlightNext(indices[0].hits.length)"
+              @keydown.enter="goToDoc(indices)"
+            />
+          </div>
           <div
             v-show="currentRefinement.length && showResults"
-            class="absolute z-10 transform mt-3 px-2 max-w-md sm:px-0"
+            class="search__results absolute z-10 transform mt-3 px-2 max-w-md sm:px-0"
           >
             <div class="rounded-md shadow-lg overflow-hidden">
-              <div
-                class="relative grid gap-6 bg-gray-900 text-gray-100 px-5 py-6 sm:gap-8 sm:p-8"
-              >
+              <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                 <div
                   v-if="currentRefinement"
                   v-for="section in indices"
@@ -31,10 +32,10 @@
                   class="divide-y divide-blue-900"
                 >
                   <nuxt-link
-                    to="#"
+                    :to="`/store/${hit.objectID}`"
                     v-for="(hit, index) in section.hits"
                     :key="hit.objectID"
-                    class="block text-sm col-span-2 py-2 transition ease-in-out duration-150"
+                    class="block col-span-2 py-2 transition ease-in-out duration-150"
                     :class="{ 'bg-blue-900': isCurrentIndex(index) }"
                   >
                     <div class="px-2" @mouseover="highlightedIndex = index">
@@ -46,12 +47,11 @@
                       <ais-snippet
                         attribute="bodyPlainText"
                         :hit="hit"
-                        class="block text-gray-100 font-base"
+                        class="block font-base"
                       />
                     </div>
                   </nuxt-link>
                 </div>
-                <ais-powered-by theme="dark" class="px-2" />
               </div>
             </div>
           </div>
@@ -136,20 +136,20 @@ export default {
 }
 .search {
   &__container {
-    background: rgba($dark-grey-blue, 0.9);
-    color: $white;
+    font-size: $default-font-size;
+    border: 1px solid $grey;
+    border-radius: 25px;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
   }
-  &__close {
+  &__icon {
     width: 1.8rem;
     height: 1.8rem;
+    // float: left;
   }
-  &__btn {
-    background: $orange;
-    svg {
-      fill: $white;
-      width: 3rem;
-      height: 3rem;
-    }
+  &__results {
+    flex: 100%;
   }
 }
 </style>

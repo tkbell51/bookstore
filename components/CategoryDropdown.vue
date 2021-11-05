@@ -5,12 +5,13 @@
         <button
           id="options-menu"
           type="button"
-          class="category__btn"
+          class="category__btn uppercase"
           aria-haspopup="true"
           aria-expanded="true"
           @click="isMenuOpen = !isMenuOpen"
         >
-          <span> <Fas i="bars" />Shop by Category </span>
+          <span> Categories</span>
+          <svg-icon name="arrow" />
         </button>
       </span>
     </div>
@@ -68,11 +69,15 @@ export default {
 
 <style lang="scss" scoped>
 .category__btn {
-  @apply px-4 py-2 w-full rounded;
-  color: $white;
-  background: $secondary-color;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+
   svg {
-    margin-right: 1rem;
+    height: 1.8rem;
+    width: 1.8rem;
+    margin-left: 6px;
   }
 }
 </style>

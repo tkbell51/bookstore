@@ -2,10 +2,13 @@
 title: Credit Repair Facts
 price: 20
 description: This book is intended for anyone dealing with credit and credit issues, including those of you with a bad credit history or no credit at all! By applying the tips within this book you can easily build your credit quickly!
-image: credit-repair-facts_nntdtm
+image: books/credit-repair-facts/main
+previewImages:
+  - books/credit-repair-facts/main
 snipcart: 058841d6-4c84-47f3-9747-39451a5cf3fc
 category: Credit Repair
 featured: false
+type: book
 ---
 
 This book is intended for anyone dealing with credit and credit issues, including those of you with a bad credit history or no credit at all! By applying the tips within this book you can easily build your credit quickly.

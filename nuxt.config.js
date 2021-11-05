@@ -25,6 +25,7 @@ export default {
     '~plugins/vue-slick-carousel.js',
     '~plugins/clickaway',
     '~/plugins/vue-instantsearch',
+    '~/plugins/vue-product-slider',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -70,6 +71,8 @@ export default {
         'faInfo',
         'faCheck',
         'faBars',
+        'faCloudDownloadAlt',
+        'faPaperclip',
       ],
       brands: ['faDev', 'faFacebook', 'faTwitter', 'faLinkedin', 'faInstagram'],
     },
@@ -93,9 +96,9 @@ export default {
     apiKey: process.env.ALGOLIA_API_KEY,
     paths: [
       {
-        name: 'books',
-        index: 'books',
-        fields: ['title', 'description', 'bodyPlainText', 'categories'],
+        name: 'products',
+        index: 'products',
+        fields: ['title', 'description', 'bodyPlainText', 'category', 'type'],
       },
     ],
   },

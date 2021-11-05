@@ -2,10 +2,13 @@
 title: Memory Hack
 price: 20
 description: By enhancing your memory, you can improve multiple aspects of your brain function, thereby helping you to perform better in work, in relationships, and life.
-image: memory-hack_mohyhe
+image: books/memory-hack/main
+previewImages:
+  - books/memory-hack/main
 snipcart: fc477f76-e933-43e6-9276-6c50f47230ea
 category: Mental Health
 featured: false
+type: book
 ---
 
 By enhancing your memory, you can improve multiple aspects of your brain function, thereby helping you to perform better in work, in relationships, and life.

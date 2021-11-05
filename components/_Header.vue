@@ -12,13 +12,14 @@
               <nuxt-link class="header__logo" to="/">
                 <Logo color="black" />
               </nuxt-link>
-              <category-dropdown />
 
               <NavLink />
             </div>
-            <Search class="border-solid border-2 border-gray-500" />
+            <Search />
             <div class="flex items-center">
-              <AccountDropdown />
+              <button href="#" class="snipcart-customer-signin block">
+                <svg-icon class="header__user" name="clear-user" />
+              </button>
               <button class="snipcart-checkout flex items-center buy-btn mx-2">
                 <Cart color="black" />
                 <div>
@@ -115,6 +116,11 @@ export default {
   background: $white;
   &__top {
     border-bottom: 1px solid rgba($black, 0.3);
+  }
+  &__user {
+    fill: $black;
+    height: 1.8rem;
+    width: 1.8rem;
   }
   &__bottom {
     @apply py-2;

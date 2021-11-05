@@ -2,28 +2,13 @@
   <footer class="footer">
     <div class="container">
       <div
-        class="
-          footer__top
-          grid grid-cols-1
-          md:grid-cols-4
-          gap-4
-          text-white
-          py-8
-          px-6
-          md:px-0
-        "
+        class="footer__top grid grid-cols-1 md:grid-cols-4 gap-4 text-white py-8 px-6 md:px-0"
       >
         <div>
           <h4>Shop</h4>
           <ul>
             <li>
               <nuxt-link to="/store">Store</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="/store/books">Ebooks</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="/store/art">Wall Art</nuxt-link>
             </li>
           </ul>
         </div>
@@ -40,24 +25,11 @@
                 type="email"
                 name="email"
                 placeholder="Email"
-                class="
-                  w-full
-                  px-2
-                  focus:outline-none
-                  rounded-tl-lg rounded-bl-lg
-                  bg-white
-                  textß-black
-                "
+                class="w-full px-2 focus:outline-none rounded-tl-lg rounded-bl-lg bg-white textß-black"
               />
               <button
                 type="submit"
-                class="
-                  email-btn
-                  text-white
-                  rounded-br-lg rounded-tr-lg
-                  px-2
-                  py-2
-                "
+                class="email-btn text-white rounded-br-lg rounded-tr-lg px-2 py-2"
               >
                 Submit
               </button>
@@ -77,28 +49,28 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
-      email: '',
+      email: "",
       error: null,
-    }
+    };
   },
   computed: {
-    ...mapGetters(['isAuthenticated', 'loggedInUser']),
+    ...mapGetters(["isAuthenticated", "loggedInUser"]),
   },
   methods: {
     async emailSubmit(e) {
-      e.preventDefault()
+      e.preventDefault();
       try {
-        await this.$strapi.$emails.create({ name: this.email })
+        await this.$strapi.$emails.create({ name: this.email });
       } catch (error) {
-        this.error = error
+        this.error = error;
       }
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-wrap gap-3">
     <div v-for="book in books" :key="book.slug">
-      <BookCard :book="book" />
+      <ProductCard :product="book" />
     </div>
   </div>
 </template>
@@ -17,7 +17,7 @@ export default {
       .limit(1)
       .fetch();
     const category = categories.length > 0 ? categories[0] : {};
-    const books = await $content("books")
+    const books = await $content("products")
       .where({ category: { $contains: category.name } })
       .sortBy("createdAt", "asc")
       .fetch();

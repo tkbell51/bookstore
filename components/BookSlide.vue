@@ -25,7 +25,7 @@
         <nuxt-link
           :key="product.slug"
           class="btn-transparent inline-block"
-          :to="`/store/${product.slugt}`"
+          :to="`/store/${product.slug}`"
           >Shop Now</nuxt-link
         >
       </div>

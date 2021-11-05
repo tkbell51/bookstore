@@ -23,12 +23,14 @@
         <h2>Featured</h2>
         <div class="flex">
           <div v-for="book in featuredBooks()" :key="book.slug">
-            <BookCard :book="book" />
+            <ProductCard :product="book" />
           </div>
         </div>
       </div>
     </section>
-    <section class="section__sales"><div class="container">sales</div></section>
+    <section class="section__sales">
+      <div class="container">sales</div>
+    </section>
     <!-- <HomeBlog /> -->
   </div>
 </template>
@@ -36,8 +38,8 @@
 <script>
 export default {
   async asyncData({ $content, error }) {
-    const books = await $content("books")
-      // .where({ featured: true })
+    const books = await $content("products")
+      .where({ type: "book" })
       .fetch()
       .catch((error) => {
         error({ statusCode: 404, message: "Books not found" });
@@ -115,18 +117,18 @@ export default {
   &__browse-categories {
     .browse-categories {
       &__link {
-        @apply rounded relative inline-block p-4 text-center;
+        @apply rounded relative inline-block p-4;
         background: $white;
         border: 1px solid $light-grey;
         color: black;
-        width: 15rem;
-        text-align: center;
+        width: 30rem;
+        height: 15rem;
+        padding: 2rem;
         // height: 60rem;
         // padding: 6rem;
         & svg {
-          width: 5rem;
-          height: 5rem;
-          margin: 0 auto;
+          width: 3rem;
+          height: 3rem;
         }
         &:hover {
           background: $light-grey;

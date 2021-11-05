@@ -1,15 +1,15 @@
 <template>
-  <div class="wrapper my-4">
-    <div class="accordion px-4" @click="toggle">
-      <p class="accordion__title text-white">
+  <div class="wrapper my-8">
+    <button class="accordion px-6 py-4 shadow" @click="toggle">
+      <span class="accordion__title">
         <slot name="title"></slot>
-      </p>
+      </span>
       <svg-icon
         :class="{ rotate: show }"
-        class="accordion__icon fill-current text-white"
+        class="accordion__icon fill-current"
         name="arrow"
       />
-    </div>
+    </button>
     <transition
       name="accordion"
       @before-enter="beforeEnter"
@@ -17,7 +17,7 @@
       @before-leave="beforeLeave"
       @leave="leave"
     >
-      <div v-show="show" class="accordion__content mt-4">
+      <div v-show="show" class="accordion__content">
         <slot name="content"></slot>
       </div>
     </transition>
@@ -28,35 +28,38 @@
 export default {
   data() {
     return {
-      show: false,
-    }
+      show: true,
+    };
   },
   methods: {
     toggle() {
-      this.show = !this.show
+      this.show = !this.show;
     },
     beforeEnter(el) {
-      el.style.height = '0'
+      el.style.height = "0";
     },
     enter(el) {
-      el.style.height = el.scrollHeight + 'px'
+      el.style.height = el.scrollHeight + "px";
     },
     beforeLeave(el) {
-      el.style.height = el.scrollHeight + 'px'
+      el.style.height = el.scrollHeight + "px";
     },
     leave(el) {
-      el.style.height = '0'
+      el.style.height = "0";
     },
   },
-}
+};
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .accordion {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: $dark-grey-blue;
+  border-radius: 25px;
+  transition: $transition;
+  width: 100%;
+
   &__icon {
     transform: rotate(0deg);
     height: 15px;
@@ -75,8 +78,22 @@ export default {
   }
 
   &__content {
+    @apply mt-4;
     overflow: hidden;
     transition: $transition;
+    padding: 0 2rem;
+
+    p,
+    a {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &:hover {
+    background: lighten($grey, 30%);
+  }
+  &:active {
+    background: lighten($grey, 20%);
   }
 }
 </style>

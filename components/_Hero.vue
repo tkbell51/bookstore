@@ -87,7 +87,6 @@ export default {
     height: inherit;
   }
   .hero__carousel {
-    height: 40rem;
     .hero-btn {
       background: $orange;
     }

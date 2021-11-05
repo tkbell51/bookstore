@@ -1,11 +1,14 @@
 ---
 title: Overcome Anxiety
 price: 20
-description: his guide will show you how to finally stop the cycle of anxiety, worry, and fear to regain control of your life.
-image: overcome-anxiety_jl2gzm
+description: This guide will show you how to finally stop the cycle of anxiety, worry, and fear to regain control of your life.
+image: books/overcome-anxiety/main
+previewImages:
+  - books/overcome-anxiety/main
 snipcart: 9eb52315-271a-45f6-8503-3dcc988425e3
 category: Mental Health
-featured: false
+featured: true
+type: book
 ---
 
 Are you always worried, afraid, or nervous?

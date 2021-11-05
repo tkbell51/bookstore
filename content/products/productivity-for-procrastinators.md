@@ -2,10 +2,13 @@
 title: Productivity for Procrastinators
 price: 20
 description: The only way you're going to change and improve your productivity is if you take the necessary steps to eliminate the reasons why you may be suffering from a lack of productivity.
-image: productivity-for-procrastinators_sb6izj
+image: books/productivity-for-procrastination/main
+previewImages:
+  - books/productivity-for-procrastination/main
 snipcart: 185b4f3f-3712-44a7-8662-4faed9e2bfb4
 category: Productivity
 featured: false
+type: book
 ---
 
 Productivity is often a misunderstood concept. Most people believe that to be productive; they have to work harder and longer.

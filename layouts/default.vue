@@ -100,7 +100,6 @@ li {
   font-size: $default-font-size;
 }
 .heading-primary {
-  color: $white;
   backface-visibility: hidden;
   display: block;
   font-size: 5rem;
