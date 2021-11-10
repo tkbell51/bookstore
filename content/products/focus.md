@@ -6,4 +6,5 @@ previewImages:
   - art/focus/prev1
 type: art
 price: 24.99
+featured: true
 ---

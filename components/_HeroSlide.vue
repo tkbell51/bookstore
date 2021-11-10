@@ -1,6 +1,7 @@
 <template>
   <div class="relative hero-slide">
     <div
+      class="rounded-lg shadow-lg"
       :style="{
         backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${backgroundURL})`,
         backgroundSize: 'cover',
@@ -44,6 +45,7 @@ export default {
 <style lang="scss" scoped>
 .hero-slide {
   height: 50rem;
+  border-radius: 10px;
   & > div {
     height: 100%;
   }

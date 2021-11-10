@@ -1,67 +1,15 @@
 <template>
   <div class="home-hero">
-    <!-- <div class="container"> -->
-    <!-- <div class="grid grid-cols-6 gap-4"> -->
-    <VueSlickCarousel v-bind="settings" class="hero__carousel col-span-4">
-      <HeroSlide title="Family" image="family" />
-      <HeroSlide title="Relationships" image="relationship" />
-      <HeroSlide title="Healthy Habits" image="healthy" />
-      <HeroSlide title="Financially" image="finance" />
-      <HeroSlide title="Spiritually" image="spiritual" />
-      <HeroSlide title="Mentally" image="mental" />
-    </VueSlickCarousel>
-    <!-- <VueSlickCarousel class="sales__carousel col-span-2">
-          <div class="sale sale-one">
-            <div
-              class="
-                px-4
-                py-4
-                flex flex-col
-                justify-center
-                items-center
-                sale-one__content
-                rounded-xl
-              "
-            >
-              <p class="text-6xl font-bold">B3G1</p>
-              <em class="font-semibold">Buy 3 Get One Free!</em>
-            </div>
-          </div>
-          <div class="sale sale-two">
-            <div
-              class="
-                px-4
-                py-4
-                flex flex-col
-                justify-center
-                items-center
-                sale-two__content
-                rounded-xl
-              "
-            >
-              <p class="text-6xl font-bold">30% off</p>
-              <em class="font-semibold">purchases over $150</em>
-            </div>
-          </div>
-          <div class="sale sale-three">
-            <div
-              class="
-                px-4
-                py-4
-                flex flex-col
-                justify-center
-                items-center
-                sale-two__content
-                rounded-xl
-              "
-            >
-              <p class="text-6xl font-bold">10% off</p>
-              <em class="font-semibold">Credit Repair Collection</em>
-            </div>
-          </div>
-        </VueSlickCarousel> -->
-    <!-- </div> -->
-    <!-- </div> -->
+    <div class="container">
+      <VueSlickCarousel v-bind="settings" class="hero__carousel col-span-4">
+        <HeroSlide title="Family" image="family" />
+        <HeroSlide title="Relationships" image="relationship" />
+        <HeroSlide title="Healthy Habits" image="healthy" />
+        <HeroSlide title="Financially" image="finance" />
+        <HeroSlide title="Spiritually" image="spiritual" />
+        <HeroSlide title="Mentally" image="mental" />
+      </VueSlickCarousel>
+    </div>
   </div>
 </template>
 
@@ -82,11 +30,12 @@ export default {
 
 <style lang="scss" scoped>
 .home-hero {
-  // background: center / cover no-repeat url('../assets/img/b2g-header-bg.jpg');
+  background: center / cover no-repeat url("../assets/img/b2g-header-bg.jpg");
   .container {
     height: inherit;
   }
   .hero__carousel {
+    padding: 3rem 0;
     .hero-btn {
       background: $orange;
     }

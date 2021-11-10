@@ -3,28 +3,8 @@
     <div class="section__product-contents mt-16">
       <div class="container">
         <div class="product__content flex flex-wrap items-start">
-          <div class="product__image mb-4 w-1/2 mx-auto">
-            <VueSlickCarousel
-              v-bind="settings"
-              :class="product.type === 'art' ? 'w-11/12' : 'w-3/4 mx-auto'"
-            >
-              <div v-for="(image, index) in product.previewImages" :key="index">
-                <cld-image
-                  :public-id="image"
-                  gravity="auto:subject"
-                  fetchFormat="auto"
-                  quality="auto"
-                  class="mx-auto"
-                />
-              </div>
-              <div class="flex items-center">
-                <img
-                  src="@/assets/img/digital-download.jpg"
-                  alt="Digital Download"
-                  class="digital-download my-auto"
-                />
-              </div>
-            </VueSlickCarousel>
+          <div class="product__image w-1/2 p-6">
+            <PictureTabs :pictures="product.previewImages" />
           </div>
           <div class="product__meta w-1/2 px-4">
             <p class="uppercase">{{ product.category }}</p>
@@ -153,13 +133,8 @@
 </template>
 
 <script>
-import { VueProductSlider } from "vue-product-slider";
 export default {
-  components: {
-    VueProductSlider,
-  },
   name: "MyComponent",
-
   async asyncData({ $content, params }) {
     const slug = params.slug || "index";
     const product = await $content("products", slug).fetch();
@@ -172,7 +147,7 @@ export default {
     if (product.type === "art") {
       relatedProducts = await $content("products").where({ type: product.type }).fetch();
     }
-
+    product.previewImages.push("img/digital-download.jpg");
     return {
       product,
       relatedProducts,
@@ -180,26 +155,22 @@ export default {
   },
   data() {
     return {
+      product: {},
       onWishlist: {},
       comment: "",
       rating: 0,
-      reviewSettings: {
-        arrows: true,
-        dots: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-      },
-      settings: {
-        edgeFriction: 0.35,
-        arrows: true,
-        dots: true,
-        infinite: true,
-      },
+
       relatedSettings: {
         arrows: true,
         dots: true,
         slidesToShow: 4,
         slidesToScroll: 1,
+      },
+      reviewSettings: {
+        arrows: true,
+        dots: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
       },
       // image: "",
       readMore: {},
@@ -225,6 +196,15 @@ export default {
     showLess(id) {
       this.$set(this.readMore, id, false);
     },
+    matchHeight() {
+      console.log(this.$refs.c1);
+      let heightString = this.$refs.c1.$el.clientHeight + "px";
+      console.log(heightString);
+      this.$refs.c2.$el.height = heightString;
+    },
+  },
+  mounted() {
+    // this.matchHeight();
   },
 };
 </script>
@@ -246,24 +226,8 @@ export default {
       transform: scale(1.5);
     }
   }
+
   &__image {
-    .slick-prev {
-      left: -33px;
-    }
-    .slick-prev,
-    .slick-next {
-      &::before {
-        color: $black;
-        font-size: 8rem;
-        line-height: none;
-      }
-    }
-    .slick-prev::before {
-      content: "\2039";
-    }
-    .slick-next::before {
-      content: "\203A";
-    }
   }
 
   &__meta {

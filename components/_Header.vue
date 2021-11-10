@@ -9,22 +9,27 @@
             </label>
             <input type="checkbox" class="hidden" ide="menu-toggle" />
             <div class="flex items-center">
-              <nuxt-link class="header__logo" to="/">
+              <nuxt-link class="header__logo flex" to="/">
                 <Logo color="black" />
+                <span>Books2Grow</span>
               </nuxt-link>
-
-              <NavLink />
             </div>
             <Search />
-            <div class="flex items-center">
-              <button href="#" class="snipcart-customer-signin block">
-                <svg-icon class="header__user" name="clear-user" />
+            <div class="flex justify-between gap-20">
+              <button href="#" class="snipcart-customer-signin block flex items-center">
+                <svg-icon class="header__user mr-2" name="clear-user" />
+                My Account
               </button>
               <button class="snipcart-checkout flex items-center buy-btn mx-2">
                 <Cart color="black" />
-                <div>
-                  <span class="snipcart-total-price"></span>
-                  <span class="snipcart-items-count mr-1"></span>
+                <div class="ml-4">
+                  <span class="whitespace-nowrap flex items-center">
+                    My Cart -
+                    <span class="snipcart-items-count block text-left mr-1"></span>
+                    item
+                  </span>
+
+                  <span class="snipcart-total-price block text-left"></span>
                 </div>
               </button>
             </div>
@@ -32,46 +37,9 @@
         </div>
       </div>
     </div>
-
-    <!-- <transition
-      enter-class="opacity-0"
-      enter-active-class="ease-out transition-medium"
-      enter-to-class="opacity-100"
-      leave-class="opacity-100"
-      leave-active-class="ease-out transition-medium"
-      leave-to-class="opacity-0"
-    >
-      <div
-        v-show="isOpen"
-        class="z-10 fixed inset-0 transition-opacity"
-        @keydown.esc="isOpen = false"
-      >
-        <div
-          class="absolute inset-0 bg-black opacity-50"
-          tabindex="0"
-          @click="isOpen = false"
-        ></div>
-      </div>
-    </transition>
-    <Search
-      class="
-        transform
-        top-0
-        right-0
-        bg-white
-        fixed
-        h-full
-        overflow-auto
-        ease-in-out
-        transition-all
-        duration-300
-        z-30
-        p-2
-      "
-      :class="isOpen ? 'translate-x-0' : 'translate-x-full'"
-      style="width: 24rem"
-      @close-search-drawer="isOpen = false"
-    /> -->
+    <div class="header__bottom">
+      <NavLink />
+    </div>
   </header>
 </template>
 
@@ -79,33 +47,6 @@
 import CategoryDropdown from "./CategoryDropdown.vue";
 export default {
   components: { CategoryDropdown },
-
-  data() {
-    return {
-      isOpen: false,
-    };
-  },
-  watch: {
-    isOpen: {
-      immediate: true,
-      handler(isOpen) {
-        if (process.client) {
-          if (isOpen) document.body.style.setProperty("overflow", "hidden");
-          else document.body.style.removeProperty("overflow");
-        }
-      },
-    },
-  },
-  mounted() {
-    document.addEventListener("keydown", (e) => {
-      if (e.keyCode === 27 && this.isOpen) this.isOpen = false;
-    });
-  },
-  methods: {
-    searchDrawer() {
-      this.isOpen = !this.isOpen;
-    },
-  },
 };
 </script>
 
@@ -119,8 +60,8 @@ export default {
   }
   &__user {
     fill: $black;
-    height: 1.8rem;
-    width: 1.8rem;
+    height: 3rem;
+    width: 3rem;
   }
   &__bottom {
     @apply py-2;
@@ -132,14 +73,14 @@ export default {
 
   &__search,
   .mobile-menu {
-    width: 1.8rem;
-    height: 1.8rem;
+    height: 3rem;
+    width: 3rem;
   }
   #menu-toggle:checked + #menu {
     display: block;
   }
   &__logo {
-    display: inline-block;
+    // display: inline-block;
     width: 6rem;
   }
   // .buy-btn {

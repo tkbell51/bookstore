@@ -1,6 +1,6 @@
 ---
 title: Overcome Anxiety
-price: 20
+price: 14.99
 description: This guide will show you how to finally stop the cycle of anxiety, worry, and fear to regain control of your life.
 image: books/overcome-anxiety/main
 previewImages:

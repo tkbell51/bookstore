@@ -6,4 +6,5 @@ previewImages:
   - art/one-percent/prev1
 type: art
 price: 24.99
+featured: true
 ---

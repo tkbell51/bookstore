@@ -25,7 +25,6 @@ export default {
     '~plugins/vue-slick-carousel.js',
     '~plugins/clickaway',
     '~/plugins/vue-instantsearch',
-    '~/plugins/vue-product-slider',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -39,6 +38,7 @@ export default {
     '@nuxtjs/fontawesome',
     '@nuxtjs/snipcart',
     'nuxt-content-algolia',
+    '@nuxt/image',
   ],
   snipcart: {
     key: process.env.SNIPCART_KEY,
@@ -48,7 +48,11 @@ export default {
       // ['data-config-add-product-behavior', 'none']
     ],
   },
-
+  image: {
+    cloudinary: {
+      baseURL: 'https://res.cloudinary.com/books2grow/image/upload/',
+    },
+  },
   styleResources: {
     scss: ['~/assets/scss/*.scss'],
   },
@@ -73,6 +77,9 @@ export default {
         'faBars',
         'faCloudDownloadAlt',
         'faPaperclip',
+        'faRocket',
+        'faCreditCard',
+        'faStar',
       ],
       brands: ['faDev', 'faFacebook', 'faTwitter', 'faLinkedin', 'faInstagram'],
     },

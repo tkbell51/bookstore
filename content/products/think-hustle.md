@@ -6,4 +6,5 @@ previewImages:
   - art/think-hustle/prev1
 price: 24.99
 type: art
+featured: true
 ---

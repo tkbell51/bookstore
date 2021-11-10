@@ -1,6 +1,6 @@
 ---
 title: Keto Cookbook
-price: 20
+price: 14.99
 description: The Keto Diet Cookbook is a collection of 60+ delicious recipes that are easy and fun to make in the comfort of your own home.
 image: books/keto-cookbook/main
 previewImages:

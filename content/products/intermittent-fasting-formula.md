@@ -1,6 +1,6 @@
 ---
 title: Intermittent Fasting Formula
-price: 20
+price: 14.99
 description: This blueprint reveals everything you need to know about Intermittent Fasting — How to get started with Intermittent Fasting, learn how Intermittent Fasting works, the amazing mental and physical health benefits, diet protocols, effective tips to get better results fast… and much more!
 image: books/intermittent-fasting/main
 previewImages:

@@ -1,5 +1,8 @@
 <template>
-  <div v-on-clickaway="closeMenu" class="relative inline-block text-left text-gray-800">
+  <div
+    v-on-clickaway="closeMenu"
+    class="relative mx-5 inline-block text-left text-gray-800"
+  >
     <div>
       <span class="rounded-md shadow-sm">
         <button
@@ -10,7 +13,7 @@
           aria-expanded="true"
           @click="isMenuOpen = !isMenuOpen"
         >
-          <span> Categories</span>
+          <span> Ebooks</span>
           <svg-icon name="arrow" />
         </button>
       </span>

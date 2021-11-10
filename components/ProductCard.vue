@@ -1,14 +1,22 @@
 <template>
   <div :key="product.slug" class="product shadow hover:shadow-lg p-1">
+    <span
+      class="product__type font-bold uppercase mt-4 py-2 px-6 text-md inline-block text-white rounded-r-full"
+      :class="product.type === 'book' ? 'book' : 'art'"
+    >
+      {{ product.type }}
+    </span>
     <div class="product__top relative">
       <nuxt-link
         :to="`/store/${product.slug}`"
         class="product__img-link shadowrelative flex justify-center items-center"
       >
-        <img
+        <nuxt-img
+          provider="cloudinary"
           :class="product.type === 'art' ? 'product__img--art' : 'product__img'"
-          :src="src"
+          :src="product.image"
           :alt="product.title"
+          fit="fill"
         />
         <svg-icon class="product__search absolute rounded-full" name="search" />
       </nuxt-link>
@@ -62,14 +70,19 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
-  // border: 1px solid $light-grey;
   justify-content: space-between;
   border-radius: 5px;
   margin-right: 1rem;
-  padding: 2rem 3rem;
+  padding: 2rem 2rem;
   overflow: hidden;
   position: relative;
-
+  background: $white;
+  &__type {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 5;
+  }
   &:hover .product__hover {
     bottom: 0;
   }
@@ -134,7 +147,12 @@ export default {
       background: darken($primary-color, 10%);
     }
   }
-
+  .book {
+    background: $blue;
+  }
+  .art {
+    background: $yellow;
+  }
   &:hover {
     background: $white;
     align-self: flex-start;

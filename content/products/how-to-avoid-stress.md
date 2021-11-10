@@ -1,6 +1,6 @@
 ---
 title: How to Avoid Stress
-price: 20
+price: 14.99
 snipcart: c701239b-87cb-4da8-95d9-ee173f4ad69f
 image: books/how-to-avoid-stress/main
 previewImages:

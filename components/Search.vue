@@ -21,7 +21,7 @@
           </div>
           <div
             v-show="currentRefinement.length && showResults"
-            class="search__results absolute z-10 transform mt-3 px-2 max-w-md sm:px-0"
+            class="search__results absolute z-10 transform mt-3 px-2 sm:px-0"
           >
             <div class="rounded-md shadow-lg overflow-hidden">
               <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
@@ -134,14 +134,20 @@ export default {
 .fade-leave-to {
   opacity: 0;
 }
+.ais-InstantSearch {
+  width: 50%;
+}
 .search {
   &__container {
     font-size: $default-font-size;
-    border: 1px solid $grey;
     border-radius: 25px;
     padding: 0 2rem;
     display: flex;
     align-items: center;
+    background: darken(#f7f7f7, 10%);
+    input {
+      background: darken(#f7f7f7, 10%);
+    }
   }
   &__icon {
     width: 1.8rem;
@@ -150,6 +156,7 @@ export default {
   }
   &__results {
     flex: 100%;
+    max-width: 34rem;
   }
 }
 </style>

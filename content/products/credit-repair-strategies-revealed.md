@@ -1,13 +1,13 @@
 ---
 title: Credit Repair Strategies Revealed
-price: 20
+price: 14.99
 description: Discover The Insider Secret Manual That Allows You To Repair Credit Score, Enjoy Your Freedom To Get Approved On Any Loans You Wants Even If You Have No Credit Building Experience Or Suffering From Deep Negative Credit History!
 image: books/credit-repair-strategies-revealed/main
 previewImages:
   - books/credit-repair-strategies-revealed/main
 snipcart: 33be243e-c7fe-49a2-bd3b-ff99358ec2b4
 category: Credit Repair
-featured: true
+featured: false
 type: book
 ---
 
@@ -50,30 +50,17 @@ Discover How To Build Back A Good Credit Score
 Here is just a sneak peak at what you’ll learn in Credit Repair Strategies Revealed:
 
 - How to Avoiding Bad Credit and Repair
-
 - Avoiding Payday Loans for Credit Repair
-
 - Building Credit and Stopping Creditors
-
 - Credit Repair and Avoiding Court
-
 - Credit Repair Collection Agency
-
 - Options to Avoid in Credit Repair and Building
-
 - Things You Need to Know About Car Loans
-
 - Things You Need to Know About College Loans
-
 - Things You Need to Know About Credit Cards
-
 - Things You Need to Know About Student Loans
-
 - Avoiding Declines by Repairing Credit
-
 - Credit Building Strategies
 - Credit Repair for Identity Theft Victims
-
 - Laws in Credit Repair
-
 - Understanding Credit Files to Repair Credit

@@ -1,7 +1,7 @@
 <template>
   <div class="store-grid flex flex-wrap gap-3">
-    <div v-for="book in books" :key="book.slug" class="store-grid__item">
-      <ProductCard :product="book" />
+    <div v-for="product in products" :key="product.slug" class="store-grid__item">
+      <ProductCard :product="product" />
     </div>
   </div>
 </template>
@@ -10,9 +10,9 @@
 export default {
   layout: "store",
   async asyncData({ $content }) {
-    const books = await $content("products").where({ type: "book" }).fetch();
+    const products = await $content("products").fetch();
     return {
-      books,
+      products,
     };
   },
 };
