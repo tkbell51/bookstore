@@ -8,7 +8,6 @@ previewImages:
 snipcart: 33be243e-c7fe-49a2-bd3b-ff99358ec2b4
 category: Credit Repair
 featured: false
-type: book
 ---
 
 How To Get Rid Of Bad Credit

@@ -69,7 +69,6 @@ export default {
     icons: {
       solid: [
         'faEnvelope',
-        'faMapMarkerAlt',
         'faCaretDown',
         'faArrowRight',
         'faInfo',
@@ -81,7 +80,7 @@ export default {
         'faCreditCard',
         'faStar',
       ],
-      brands: ['faDev', 'faFacebook', 'faTwitter', 'faLinkedin', 'faInstagram'],
+      brands: ['faDev', 'faInstagram', 'faPinterest'],
     },
   },
   cloudinary: {

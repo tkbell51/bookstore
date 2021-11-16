@@ -6,9 +6,8 @@ image: books/bulletproof-mind/main
 previewImages:
   - books/bulletproof-mind/main
 snipcart: 5476e2a9-e9b9-4b3c-9a98-28edb67183f9
-category: Personal Development
+category: Personal Growth
 featured: true
-type: book
 ---
 
 Tried and tested strategies that will literally transform you into a man of steel, bulletproofing your mind against all your adversities, and achieve your goals at the same time.

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex gap-2">
+  <div class="flex gap-2 justify-center">
     <ul class="w-2/12">
       <li class="mb-2" v-for="(item, index) in pictures" :key="index">
         <div @click="selectTab(index)" :class="{ selected: index == selectedIndex }">
@@ -19,7 +19,7 @@
         </div>
       </li>
     </ul>
-    <div class="w-10/12">
+    <div class="w-8/12">
       <transition name="fade">
         <nuxt-img
           v-if="selectedIndex == pictures.length - 1"

@@ -6,9 +6,8 @@ image: books/abundance-mindset/main
 previewImages:
   - books/abundance-mindset/main
 snipcart: 7fea20bd-6213-4148-a97e-47edd008d50b
-category: Personal Development
+category: Personal Growth
 featured: false
-type: book
 ---
 
 Living an abundant life is available to all individuals on this Earth, and it all depends on the mindset.

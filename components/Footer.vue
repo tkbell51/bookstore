@@ -1,47 +1,53 @@
 <template>
   <footer class="footer">
     <div class="container">
-      <div
-        class="footer__top grid grid-cols-1 md:grid-cols-4 gap-4 text-white py-8 px-6 md:px-0"
-      >
+      <div class="footer__top py-8">
         <div>
-          <h4>Shop</h4>
-          <ul>
-            <li>
-              <nuxt-link to="/store">Store</nuxt-link>
-            </li>
-          </ul>
+          <Logo color="white" class="footer__logo" />
         </div>
-        <div>
-          <h4>Products</h4>
-        </div>
-        <div class="email-cta">
-          <p class="email-cta__title mb-4">Sign up for our Newsletter</p>
-          <form method="post" @submit.prevent="emailSubmit">
-            <div class="email-input flex justify-between shadow">
-              <input
-                id="email"
-                v-model="email"
-                type="email"
-                name="email"
-                placeholder="Email"
-                class="w-full px-2 focus:outline-none rounded-tl-lg rounded-bl-lg bg-white textß-black"
-              />
-              <button
-                type="submit"
-                class="email-btn text-white rounded-br-lg rounded-tr-lg px-2 py-2"
+        <ul class="footer__social--menu flex items-center justify-center">
+          <li
+            class="footer__social--item mx-5"
+            v-for="link in socialLinks"
+            :key="link.name"
+          >
+            <a class="footer__social--link" :href="link.url" target="_blank">
+              <Fab class="footer__social--icon" :i="link.name" />
+              <span class="hidden"
+                >Books 2 Grow <span class="capitalize">{{ link.name }}</span></span
               >
-                Submit
-              </button>
-            </div>
-          </form>
-        </div>
+            </a>
+          </li>
+        </ul>
+        <ul class="flex justify-center items-center">
+          <li>
+            <NuxtLink class="mx-4 text-gray-500" to="/digital-shopping"
+              >Digital Shopping</NuxtLink
+            >
+          </li>
+          <li>
+            <NuxtLink class="mx-4 text-gray-500" to="/privacy-policy"
+              >Privacy Policy</NuxtLink
+            >
+          </li>
+        </ul>
       </div>
     </div>
     <div class="footer__bottom text-white py-2">
       <div class="container">
-        <div class="flex">
-          <p>Copyright</p>
+        <div class="flex justify-between items-center">
+          <p class="white mx-4">
+            &copy; {{ new Date().getFullYear() }} Designed by
+            <a href="https://bellwebagency.com" target="_blank" title="Bell Web Agency"
+              >Bell Web Agency</a
+            >
+          </p>
+
+          <div class="flex justify-center">
+            <svg-icon name="paypal" class="h-14 w-14" />
+            <svg-icon name="mastercard" class="h-14 w-14" />
+            <svg-icon name="visa" class="h-14 w-14" />
+          </div>
         </div>
       </div>
     </div>
@@ -55,6 +61,13 @@ export default {
     return {
       email: "",
       error: null,
+      socialLinks: [
+        {
+          name: "pinterest",
+          url: "https://pin.it/3yVieTm",
+        },
+        { name: "instagram", url: "https://www.instagram.com/books.2grow/" },
+      ],
     };
   },
   computed: {
@@ -93,9 +106,14 @@ export default {
       }
     }
   }
+  &__social {
+    &--icon {
+      @apply my-4;
+      font-size: 3rem;
+    }
+  }
   &__logo {
-    display: inline-block;
-    width: 8rem;
+    width: 20rem;
   }
   .email-cta {
     &__title {

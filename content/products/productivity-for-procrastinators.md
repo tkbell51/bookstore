@@ -6,9 +6,8 @@ image: books/productivity-for-procrastination/main
 previewImages:
   - books/productivity-for-procrastination/main
 snipcart: 185b4f3f-3712-44a7-8662-4faed9e2bfb4
-category: Productivity
+category: Personal Growth
 featured: false
-type: book
 ---
 
 Productivity is often a misunderstood concept. Most people believe that to be productive; they have to work harder and longer.

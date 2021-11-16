@@ -6,8 +6,10 @@ $yellow: #d14e51;
 $primary-color: $green;
 $secondary-color: $orange;
 
-$light-grey: #f0f2f3;
 $grey: #919191;
+$light-grey: lighten($grey, 20%);
+$very-light-grey: lighten($grey, 30%);
+
 $light-black: #282828;
 $black: #171717;
 $dark-grey-blue: #546a7b;

@@ -9,10 +9,11 @@
   >
     <style lang="text/css">
       .black {
-            fill: #3d3c3d;
-          }
-          .white {
-        fill: #ffffff;
+      	fill: #3d3c3d;
+      }
+
+      .white {
+      	fill: #ffffff;
       }
     </style>
     <path

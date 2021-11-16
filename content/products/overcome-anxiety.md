@@ -8,7 +8,6 @@ previewImages:
 snipcart: 9eb52315-271a-45f6-8503-3dcc988425e3
 category: Mental Health
 featured: true
-type: book
 ---
 
 Are you always worried, afraid, or nervous?

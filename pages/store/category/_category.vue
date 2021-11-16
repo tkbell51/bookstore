@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-wrap gap-3">
-    <div v-for="book in books" :key="book.slug">
+  <div class="flex flex-wrap gap-6">
+    <div v-for="book in books" :key="book.slug" class="mx-auto">
       <ProductCard :product="book" />
     </div>
   </div>

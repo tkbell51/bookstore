@@ -1,14 +1,27 @@
 <template>
   <div class="home-hero">
     <div class="container">
-      <VueSlickCarousel v-bind="settings" class="hero__carousel col-span-4">
-        <HeroSlide title="Family" image="family" />
-        <HeroSlide title="Relationships" image="relationship" />
-        <HeroSlide title="Healthy Habits" image="healthy" />
-        <HeroSlide title="Financially" image="finance" />
-        <HeroSlide title="Spiritually" image="spiritual" />
-        <HeroSlide title="Mentally" image="mental" />
-      </VueSlickCarousel>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 py-12">
+        <VueSlickCarousel v-bind="settings" class="hero__carousel col-span-2">
+          <HeroSlide title="Family" image="family" />
+          <HeroSlide title="Relationships" image="relationship" />
+          <HeroSlide title="Healthy Habits" image="healthy" />
+          <HeroSlide title="Financially" image="finance" />
+          <HeroSlide title="Spiritually" image="spiritual" />
+          <HeroSlide title="Mentally" image="mental" />
+        </VueSlickCarousel>
+        <div class="col-span-2 md:col-span-1">
+          <div
+            class="home-hero__sale shadow hover:shadow-xl w-full h-full flex justify-center items-center rounded flex flex-col text-white cursor-pointer py-24 md:py-auto"
+          >
+            <span class="text-6xl uppercase font-bold">Buy 3</span>
+            <span class="text-4xl uppercase">Get the 4th</span>
+            <span class="text-6xl uppercase font-bold">Free </span>
+            <span class="text-4xl uppercase">Storewide!</span>
+            <NuxtLink class="hover-btn my-2" to="/store">Shop Now</NuxtLink>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -18,6 +31,7 @@ export default {
   data() {
     return {
       settings: {
+        arrows: false,
         autoplay: true,
         autoplaySpeed: 8000,
         infinite: true,
@@ -28,14 +42,13 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .home-hero {
   background: center / cover no-repeat url("../assets/img/b2g-header-bg.jpg");
   .container {
     height: inherit;
   }
   .hero__carousel {
-    padding: 3rem 0;
     .hero-btn {
       background: $orange;
     }
@@ -43,19 +56,35 @@ export default {
       fill: $white !important;
     }
 
-    .slick-next {
-      right: 1%;
-    }
-    .slick-prev {
-      left: 1%;
-      z-index: 1;
-    }
-
     .slick-list,
     .slick-trac,
     .slick-slide,
     .slick-slide > div {
       height: inherit;
+    }
+  }
+  &__sale {
+    background: radial-gradient(lighten(red, 10%), darken(red, 20%));
+
+    span {
+      transition: $transition;
+      transform: scale(1.5);
+      line-height: 4rem;
+    }
+
+    &:hover {
+      color: $white;
+      span {
+        line-height: 5rem;
+        transform: scale(2);
+      }
+      .hover-btn {
+        &:hover {
+          @apply shadow-lg;
+          background: $white;
+          color: $black;
+        }
+      }
     }
   }
 }

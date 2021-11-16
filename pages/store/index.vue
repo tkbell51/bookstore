@@ -1,6 +1,6 @@
 <template>
-  <div class="store-grid flex flex-wrap gap-3">
-    <div v-for="product in products" :key="product.slug" class="store-grid__item">
+  <div class="store-grid flex flex-wrap gap-6">
+    <div v-for="product in products" :key="product.slug" class="store-grid__item mx-auto">
       <ProductCard :product="product" />
     </div>
   </div>

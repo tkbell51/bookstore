@@ -6,12 +6,13 @@
         backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${src})`,
       }"
     ></div>
-    <div class="product__slide--content flex justify-center top-50 gap-8 mt-6">
+    <div
+      class="product__slide--content flex items-center justify-center top-50 gap-8 mt-6"
+    >
       <div class="product__slide-img">
         <img :src="src" :alt="`${product.title}`" class="shadow-xl" />
       </div>
       <div class="text-white mt-10 w-1/2">
-        <h4 class="product__category">{{ product.category }}</h4>
         <h3 class="text-4xl font-bold mb-4">{{ product.title }}</h3>
         <!-- <StarsRatings
           v-if="product.product_reviews.length != 0"
@@ -21,10 +22,10 @@
           :increment="0.5"
           :show-rating="false"
         ></StarsRatings> -->
-        <p class="mb-4">{{ product.description }}</p>
+        <p class="mb-4 hidden md:block">{{ product.description }}</p>
         <nuxt-link
           :key="product.slug"
-          class="btn-transparent inline-block"
+          class="hover-btn my-3 inline-block"
           :to="`/store/${product.slug}`"
           >Shop Now</nuxt-link
         >
@@ -41,6 +42,13 @@ export default {
       default: () => ({}),
     },
   },
+
+  data() {
+    return {
+      productType: {},
+    };
+  },
+
   computed: {
     src() {
       return this.$cloudinary.image.url(this.product.image, {

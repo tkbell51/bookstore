@@ -18,9 +18,9 @@
   }
 
   @if $breakpoint==tab-mid {
-    @media only screen and(max-width: 64em) {
+    @media only screen and(max-width: 63.75em) {
       @content;
-    } //978px for .popup
+    } //1020px for header
   }
 
   @if $breakpoint==tab-land {

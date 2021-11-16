@@ -8,7 +8,6 @@ previewImages:
 snipcart: 5c5ef930-8f1f-4b10-9911-7cda33d8a724
 category: Food & Diet
 featured: true
-type: book
 ---
 
 Intermittent Fasting Formula” is an easy-to-follow plan to help you lose weight fast.

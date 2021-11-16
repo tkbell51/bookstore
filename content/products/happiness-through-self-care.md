@@ -6,8 +6,7 @@ image: books/happiness-self-care/main
 previewImages:
   - books/happiness-self-care/main
 snipcart: 81812e82-68d6-4e2b-967f-ca33b920d570
-category: Personal Development
-type: book
+category: Personal Growth
 ---
 
 Finally! End Stress, Anxiety, and Burnout By Following This Simple Plan to Soothe and Care For Your Body, Mind, and Spirit

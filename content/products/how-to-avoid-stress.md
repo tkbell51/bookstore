@@ -7,7 +7,6 @@ previewImages:
   - books/how-to-avoid-stress/main
 description: This course will help you deal with most stressful situations and even explain to you how you can de-escalate these sorts of unfortunate events from exploding in your face.
 category: Mental Health
-type: book
 ---
 
 Stress is something that nobody can avoid forever.

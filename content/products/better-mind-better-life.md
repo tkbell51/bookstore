@@ -8,7 +8,6 @@ previewImages:
 snipcart: b68c9534-2de7-4c4b-8170-6a11925deaa9
 category: Mental Health
 featured: false
-type: book
 ---
 
 Stress is something that nobody can avoid forever. Stressful situations will always come up when you least expect them and they will literally destroy you mentally most of the time.

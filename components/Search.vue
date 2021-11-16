@@ -135,7 +135,11 @@ export default {
   opacity: 0;
 }
 .ais-InstantSearch {
-  width: 50%;
+  width: 45%;
+  @include respond(tab-port) {
+    flex: 100%;
+    margin: 0.5rem 0;
+  }
 }
 .search {
   &__container {

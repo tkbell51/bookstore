@@ -1,18 +1,21 @@
 <template>
-  <div class="body">
-    <Header />
-    <div class="content store-content">
-      <StoreHeader />
-      <div class="container">
-        <div class="flex gap-8">
-          <StoreLinks class="w-1/5" />
-          <Nuxt class="w-4/5" />
+  <div class="page">
+    <div class="overlay"></div>
+    <div class="body">
+      <Header />
+      <div class="content store-content">
+        <StoreHeader />
+        <div class="container">
+          <div class="md:flex gap-8">
+            <StoreLinks class="md:w-1/5" />
+            <Nuxt class="md:w-4/5" />
+          </div>
         </div>
+        <!-- <Snipcart /> -->
       </div>
-      <!-- <Snipcart /> -->
-    </div>
 
-    <Footer />
+      <Footer />
+    </div>
   </div>
 </template>
 

@@ -1,11 +1,14 @@
 <template>
-  <div class="body">
-    <Header />
-    <Nuxt class="content" />
+  <div class="page">
+    <div class="overlay"></div>
+    <div class="body">
+      <Header />
+      <Nuxt class="content" />
 
-    <!-- <Snipcart /> -->
+      <!-- <Snipcart /> -->
 
-    <Footer />
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -27,6 +30,25 @@ html {
 }
 body {
   background: $white;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgba($black, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  &.show {
+    opacity: 0.8;
+    visibility: visible;
+  }
 }
 html,
 .body {
@@ -68,6 +90,7 @@ html,
 }
 a {
   transition: $transition;
+  cursor: pointer;
   &:hover {
     color: $orange;
   }
@@ -137,6 +160,16 @@ section {
   padding: 8rem 0;
   @include respond(phone) {
     padding: 3rem 0;
+  }
+}
+.hover-btn {
+  @apply py-4 px-8 text-white font-bold rounded z-10;
+  border: 1px solid $white;
+  background: rgba($black, 0.5);
+  &:hover {
+    color: $white;
+    background: $secondary-color;
+    border: 1px solid $secondary-color;
   }
 }
 </style>

@@ -11,12 +11,8 @@
     >
       <div class="hero-slide__text">
         <p class="font-bold">Find books to help grow</p>
-        <h1 class="hero-slide__title">{{ title }}</h1>
-        <nuxt-link
-          to="/store"
-          class="hero-btn text-white z-10 hover:text-white py-2 px-4 rounded font-bold"
-          >Show Now</nuxt-link
-        >
+        <h1 class="hero-slide__title lg:whitespace-nowrap">{{ title }}</h1>
+        <nuxt-link to="/store" class="hover-btn">Show Now</nuxt-link>
       </div>
     </div>
   </div>
@@ -44,7 +40,7 @@ export default {
 
 <style lang="scss" scoped>
 .hero-slide {
-  height: 50rem;
+  height: 40rem;
   border-radius: 10px;
   & > div {
     height: 100%;
@@ -58,16 +54,26 @@ export default {
     @include absCenter;
     color: $white;
     text-align: center;
-
+    z-index: 10;
     p {
       text-transform: uppercase;
     }
   }
 
   &__title {
-    white-space: nowrap;
-    // font-size: calc(60px + (100 - 50) * (100vw - 400px) / (1200 - 400));
-    font-size: 10rem;
+    font-size: clamp(6rem, 12vw, 10rem);
+    margin: 2rem auto 8%;
+    line-height: 7rem;
+    // font-size: 10rem;
+  }
+  .hover-btn {
+    background: rgba($black, 0.5);
+    backdrop-filter: blur(26px);
+    &:hover {
+      color: $white;
+      background: $secondary-color;
+      border: 1px solid $secondary-color;
+    }
   }
 }
 </style>

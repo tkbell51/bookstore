@@ -1,11 +1,5 @@
 <template>
-  <div :key="product.slug" class="product shadow hover:shadow-lg p-1">
-    <span
-      class="product__type font-bold uppercase mt-4 py-2 px-6 text-md inline-block text-white rounded-r-full"
-      :class="product.type === 'book' ? 'book' : 'art'"
-    >
-      {{ product.type }}
-    </span>
+  <div :key="product.slug" class="product shadow hover:shadow-lg p-1 mx-auto">
     <div class="product__top relative">
       <nuxt-link
         :to="`/store/${product.slug}`"
@@ -13,7 +7,7 @@
       >
         <nuxt-img
           provider="cloudinary"
-          :class="product.type === 'art' ? 'product__img--art' : 'product__img'"
+          class="product__img"
           :src="product.image"
           :alt="product.title"
           fit="fill"
@@ -22,9 +16,11 @@
       </nuxt-link>
     </div>
     <div class="product__bottom">
-      <nuxt-link :to="`/store/${product.slug}`" class="product__title font-bold">
-        {{ product.title }}
-      </nuxt-link>
+      <h4>
+        <nuxt-link :to="`/store/${product.slug}`" class="product__title font-bold">
+          {{ product.title }}
+        </nuxt-link>
+      </h4>
       <p>${{ product.price }}</p>
     </div>
 
@@ -66,17 +62,19 @@ export default {
 <style lang="scss" scoped>
 .product {
   transition: all 0.3s ease;
-  width: 23rem;
+  width: 25rem;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 5px;
-  margin-right: 1rem;
   padding: 2rem 2rem;
   overflow: hidden;
   position: relative;
   background: $white;
+  @include respond(tab-port) {
+    width: 22rem;
+  }
   &__type {
     position: absolute;
     top: 10px;

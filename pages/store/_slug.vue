@@ -2,11 +2,13 @@
   <div class="relative overflow-hidden">
     <div class="section__product-contents mt-16">
       <div class="container">
-        <div class="product__content flex flex-wrap items-start">
-          <div class="product__image w-1/2 p-6">
+        <div
+          class="product__content flex flex-col md:flex-row flex-wrap items-center md:items-start"
+        >
+          <div class="product__image md:w-1/2 p-6">
             <PictureTabs :pictures="product.previewImages" />
           </div>
-          <div class="product__meta w-1/2 px-4">
+          <div class="product__meta md:w-1/2 px-4">
             <p class="uppercase">{{ product.category }}</p>
             <h1 class="heading-primary mb-4">{{ product.title }}</h1>
             <p class="product__price text-4xl mb-4 font-semibold">${{ product.price }}</p>
@@ -33,22 +35,13 @@
                   <Fas i="cloud-download-alt" />Digital Download
                 </p>
                 <p class="flex items-center gap-4">
-                  <Fas i="paperclip" />Digital file type(s): 1 {{ product.fileType }}
+                  <Fas i="paperclip" />Digital file type(s): 1 PDF
                 </p>
               </template>
             </Accordion>
             <Accordion>
               <template v-slot:title>Description</template>
               <template v-slot:content>
-                <div v-if="product.type === 'art'">
-                  <p>
-                    Instant downloads are easy and affordable way to transform and update
-                    your space. You will be able to download your files right after you
-                    purchase. Also, you will receive an e-mail with a download link.
-                    Kindly note - this is an INSTANT DOWNLOAD. No physical product will be
-                    shipped. You can print at home or use on-line printing services.
-                  </p>
-                </div>
                 <nuxt-content :document="product"></nuxt-content>
               </template>
             </Accordion>
@@ -97,8 +90,8 @@
               </template>
             </Accordion> -->
 
-            <div class="flex items-center gap-4">
-              <!-- <StarsRatings
+            <!-- <div class="flex items-center gap-4"> -->
+            <!-- <StarsRatings
                 v-if="product.product_reviews.length !== 0"
                 class="md:text-white"
                 :rating="$getRatingAvg(product.product_reviews)"
@@ -107,10 +100,10 @@
                 :increment="0.1"
               ></StarsRatings> -->
 
-              <!-- <span class="mt-1">
+            <!-- <span class="mt-1">
                 {{ $ratingGraph(product).totalCount }} reviews
               </span> -->
-            </div>
+            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -118,13 +111,14 @@
 
     <section class="section__related-products">
       <div class="container">
-        <h2 class="text-3xl font-semibold">Related products</h2>
+        <h2 class="heading-secondary">Related products</h2>
         <VueSlickCarousel v-bind="relatedSettings">
-          <ProductCard
+          <div
             v-for="b in relatedProducts.filter((p) => p.title != product.title)"
             :key="b.slug"
-            :product="b"
-          />
+          >
+            <ProductCard :product="b" />
+          </div>
         </VueSlickCarousel>
         <div class="flex flex-wrap gap-3"></div>
       </div>
@@ -138,15 +132,10 @@ export default {
   async asyncData({ $content, params }) {
     const slug = params.slug || "index";
     const product = await $content("products", slug).fetch();
-    let relatedProducts;
-    if (product.type === "book") {
-      relatedProducts = await $content("products")
-        .where({ category: product.category })
-        .fetch();
-    }
-    if (product.type === "art") {
-      relatedProducts = await $content("products").where({ type: product.type }).fetch();
-    }
+    let relatedProducts = await $content("products")
+      .where({ category: product.category })
+      .fetch();
+
     product.previewImages.push("img/digital-download.jpg");
     return {
       product,
@@ -162,13 +151,37 @@ export default {
 
       relatedSettings: {
         arrows: true,
-        dots: true,
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1260,
+            settings: {
+              slidesToShow: 4,
+            },
+          },
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 765,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 540,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
       },
       reviewSettings: {
         arrows: true,
-        dots: true,
         slidesToShow: 3,
         slidesToScroll: 3,
       },
@@ -277,19 +290,30 @@ export default {
   }
 
   &__related-products {
+    background: lighten($grey, 20%);
+    .slick-prev {
+      right: 8rem;
+    }
+    .slick-next {
+      right: 4rem;
+    }
     .slick-prev,
     .slick-next {
+      left: auto;
+      transform: none;
+      top: -5rem;
+      z-index: 1;
       &::before {
-        color: $secondary-color;
-        font-size: 8rem;
+        color: $black;
+        font-size: 3rem;
         line-height: none;
       }
     }
     .slick-prev::before {
-      content: "\2039";
+      // content: "\2039";
     }
     .slick-next::before {
-      content: "\203A";
+      // content: "\203A";
     }
   }
 }
