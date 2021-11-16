@@ -51,7 +51,9 @@
                 <p class="text-4xl mb-4">Instant Download</p>
                 <p>
                   Your files will be available to download once payment is confirmed.
-                  <NuxtLink class="underline" to="/download-orders">Here's how.</NuxtLink>
+                  <NuxtLink class="underline" to="/digital-shopping"
+                    >Here's how.</NuxtLink
+                  >
                 </p>
 
                 <p>
@@ -127,8 +129,12 @@
 </template>
 
 <script>
+import SEO from "~/mixins/SEO.js";
+
 export default {
   name: "MyComponent",
+  mixins: [SEO],
+
   async asyncData({ $content, params }) {
     const slug = params.slug || "index";
     const product = await $content("products", slug).fetch();
@@ -140,32 +146,23 @@ export default {
     return {
       product,
       relatedProducts,
-    };
-  },
-  data() {
-    return {
-      product: {},
-      onWishlist: {},
-      comment: "",
-      rating: 0,
-
+      seo: {
+        title: product.title,
+        description: product.description,
+        image: `https://res.cloudinary.com/books2grow/image/upload/v1605819200/books/${product.slug}/main.png`,
+      },
       relatedSettings: {
         arrows: true,
-        slidesToShow: 5,
+        slidesToShow: relatedProducts.length - 1,
         slidesToScroll: 1,
         responsive: [
           {
             breakpoint: 1260,
             settings: {
-              slidesToShow: 4,
-            },
-          },
-          {
-            breakpoint: 1024,
-            settings: {
               slidesToShow: 3,
             },
           },
+
           {
             breakpoint: 765,
             settings: {
@@ -180,6 +177,15 @@ export default {
           },
         ],
       },
+    };
+  },
+  data() {
+    return {
+      product: {},
+      onWishlist: {},
+      comment: "",
+      rating: 0,
+
       reviewSettings: {
         arrows: true,
         slidesToShow: 3,

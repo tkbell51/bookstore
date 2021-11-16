@@ -21,10 +21,10 @@
           </div>
           <div
             v-show="currentRefinement.length && showResults"
-            class="search__results absolute z-10 transform mt-3 px-2 sm:px-0"
+            class="search__results absolute z-10 transform mt-3"
           >
             <div class="rounded-md shadow-lg overflow-hidden">
-              <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+              <div class="relative grid gap-6 bg-white">
                 <div
                   v-if="currentRefinement"
                   v-for="section in indices"
@@ -35,14 +35,14 @@
                     :to="`/store/${hit.objectID}`"
                     v-for="(hit, index) in section.hits"
                     :key="hit.objectID"
-                    class="block col-span-2 py-2 transition ease-in-out duration-150"
-                    :class="{ 'bg-blue-900': isCurrentIndex(index) }"
+                    class="result__link block col-span-2 py-2 transition ease-in-out duration-150 px-5 py-6"
+                    :class="{ 'bg-gray-300': isCurrentIndex(index) }"
                   >
                     <div class="px-2" @mouseover="highlightedIndex = index">
                       <ais-highlight
                         attribute="title"
                         :hit="hit"
-                        class="block text-blue-300 font-medium"
+                        class="block font-medium title"
                       />
                       <ais-snippet
                         attribute="bodyPlainText"
@@ -161,6 +161,11 @@ export default {
   &__results {
     flex: 100%;
     max-width: 34rem;
+  }
+}
+.result__link {
+  &:hover {
+    color: $black;
   }
 }
 </style>

@@ -5,7 +5,11 @@ description: This book is intended for anyone dealing with credit and credit iss
 image: books/credit-repair-facts/main
 previewImages:
   - books/credit-repair-facts/main
-snipcart: 058841d6-4c84-47f3-9747-39451a5cf3fc
+  - books/credit-repair-facts/prev1
+  - books/credit-repair-facts/prev2
+  - books/credit-repair-facts/prev3
+  - books/credit-repair-facts/prev4
+snipcart: 5a9b3ba1-f4f0-4d90-a63f-df36c3d4b461
 category: Credit Repair
 featured: false
 ---

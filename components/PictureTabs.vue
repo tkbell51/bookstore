@@ -1,6 +1,6 @@
 <template>
   <div class="flex gap-2 justify-center">
-    <ul class="w-2/12">
+    <ul class="w-1/12">
       <li class="mb-2" v-for="(item, index) in pictures" :key="index">
         <div @click="selectTab(index)" :class="{ selected: index == selectedIndex }">
           <nuxt-img
@@ -25,12 +25,14 @@
           v-if="selectedIndex == pictures.length - 1"
           :src="pictures[selectedIndex]"
           fit="fill"
+          class="shadow-md"
         />
         <nuxt-img
           v-else
           provider="cloudinary"
           :src="pictures[selectedIndex]"
           fit="fill"
+          class="shadow-md"
         />
       </transition>
     </div>

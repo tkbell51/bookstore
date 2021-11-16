@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap gap-6">
+  <div class="store-grid">
     <div v-for="book in books" :key="book.slug" class="mx-auto">
       <ProductCard :product="book" />
     </div>
@@ -7,9 +7,13 @@
 </template>
 
 <script>
+import SEO from "~/mixins/SEO.js";
 export default {
   layout: "store",
-
+  mixins: [SEO],
+  data() {
+    return {};
+  },
   async asyncData({ $content, params }) {
     const slug = params.category || "index";
     const categories = await $content("categories")
@@ -25,6 +29,10 @@ export default {
     return {
       category,
       books,
+      seo: {
+        title: category.name,
+        description: category.description,
+      },
     };
   },
 };

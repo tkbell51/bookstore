@@ -5,7 +5,12 @@ description: This blueprint reveals everything you need to know about Intermitte
 image: books/intermittent-fasting/main
 previewImages:
   - books/intermittent-fasting/main
-snipcart: 5c5ef930-8f1f-4b10-9911-7cda33d8a724
+  - books/intermittent-fasting/prev1
+  - books/intermittent-fasting/prev2
+  - books/intermittent-fasting/prev3
+  - books/intermittent-fasting/prev4
+  - books/intermittent-fasting/prev5
+snipcart: 1b979c5a-63a7-4c57-a137-03d4a9f04d73
 category: Food & Diet
 featured: true
 ---

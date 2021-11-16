@@ -5,7 +5,11 @@ description: The only way you're going to change and improve your productivity i
 image: books/productivity-for-procrastination/main
 previewImages:
   - books/productivity-for-procrastination/main
-snipcart: 185b4f3f-3712-44a7-8662-4faed9e2bfb4
+  - books/productivity-for-procrastination/prev1
+  - books/productivity-for-procrastination/prev2
+  - books/productivity-for-procrastination/prev3
+  - books/productivity-for-procrastination/prev4
+snipcart: 91aca8fe-e7fe-423b-b709-df13ff02bfa7
 category: Personal Growth
 featured: false
 ---

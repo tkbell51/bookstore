@@ -5,7 +5,11 @@ description: Living an abundant life is available to all individuals on this Ear
 image: books/abundance-mindset/main
 previewImages:
   - books/abundance-mindset/main
-snipcart: 7fea20bd-6213-4148-a97e-47edd008d50b
+  - books/abundance-mindset/prev1
+  - books/abundance-mindset/prev2
+  - books/abundance-mindset/prev3
+  - books/abundance-mindset/prev4
+snipcart: b8764304-14db-4500-8190-b0aa65ce9b6f
 category: Personal Growth
 featured: false
 ---

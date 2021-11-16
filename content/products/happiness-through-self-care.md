@@ -5,7 +5,11 @@ description: Discover how learning the power of self-care can transform your lif
 image: books/happiness-self-care/main
 previewImages:
   - books/happiness-self-care/main
-snipcart: 81812e82-68d6-4e2b-967f-ca33b920d570
+  - books/happiness-self-care/prev1
+  - books/happiness-self-care/prev2
+  - books/happiness-self-care/prev3
+  - books/happiness-self-care/prev4
+snipcart: e55d50ae-beb3-46db-82bf-4afd8f2fc3ab
 category: Personal Growth
 ---
 

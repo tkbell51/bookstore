@@ -5,7 +5,10 @@ description: By enhancing your memory, you can improve multiple aspects of your 
 image: books/memory-hack/main
 previewImages:
   - books/memory-hack/main
-snipcart: fc477f76-e933-43e6-9276-6c50f47230ea
+  - books/memory-hack/prev1
+  - books/memory-hack/prev2
+  - books/memory-hack/prev3
+snipcart: 2da14a4f-514e-4596-83d5-c22b698eafd4
 category: Mental Health
 featured: false
 ---

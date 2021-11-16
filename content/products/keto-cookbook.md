@@ -5,7 +5,10 @@ description: The Keto Diet Cookbook is a collection of 60+ delicious recipes tha
 image: books/keto-cookbook/main
 previewImages:
   - books/keto-cookbook/main
-snipcart: 3ee94b88-d0f9-448d-9c35-df64e93b7f45
+  - books/keto-cookbook/prev1
+  - books/keto-cookbook/prev2
+  - books/keto-cookbook/prev3
+snipcart: 2da52611-6b7b-44dc-bb3a-a21b0c6a67b7
 category: Food & Diet
 featured: true
 ---

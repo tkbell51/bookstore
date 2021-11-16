@@ -30,6 +30,11 @@
               >Privacy Policy</NuxtLink
             >
           </li>
+          <li>
+            <NuxtLink class="mx-4 text-gray-500" to="/refund-policy"
+              >Refund Policy</NuxtLink
+            >
+          </li>
         </ul>
       </div>
     </div>

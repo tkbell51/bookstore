@@ -6296,7 +6296,18 @@
 </template>
 
 <script>
-export default {};
+import SEO from "~/mixins/SEO.js";
+
+export default {
+  mixins: [SEO],
+ data() {
+    return {
+      seo: {
+        title: "Privacy Policy",
+      },
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>

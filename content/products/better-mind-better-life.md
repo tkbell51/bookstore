@@ -5,7 +5,11 @@ description: Learn ways to deal with stressful situations!
 image: books/bettermindbetterlife/main
 previewImages:
   - books/bettermindbetterlife/main
-snipcart: b68c9534-2de7-4c4b-8170-6a11925deaa9
+  - books/bettermindbetterlife/prev1
+  - books/bettermindbetterlife/prev2
+  - books/bettermindbetterlife/prev3
+
+snipcart: dd33da90-9c26-49f9-b665-1e609a5705fc
 category: Mental Health
 featured: false
 ---

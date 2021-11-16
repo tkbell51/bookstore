@@ -58,7 +58,11 @@
 </template>
 
 <script>
+import SEO from "~/mixins/SEO.js";
+
 export default {
+  mixins: [SEO],
+
   async asyncData({ $content, error }) {
     const products = await $content("products")
       .fetch()
@@ -79,6 +83,9 @@ export default {
 
   data() {
     return {
+      seo: {
+        title: "Home",
+      },
       selectedCategory: "",
       books: [],
 

@@ -5,7 +5,11 @@ description: Discover The Insider Secret Manual That Allows You To Repair Credit
 image: books/credit-repair-strategies-revealed/main
 previewImages:
   - books/credit-repair-strategies-revealed/main
-snipcart: 33be243e-c7fe-49a2-bd3b-ff99358ec2b4
+  - books/credit-repair-strategies-revealed/prev1
+  - books/credit-repair-strategies-revealed/prev2
+  - books/credit-repair-strategies-revealed/prev3
+  - books/credit-repair-strategies-revealed/prev4
+snipcart: 76159d48-0188-473d-b723-d8cd08744384
 category: Credit Repair
 featured: false
 ---

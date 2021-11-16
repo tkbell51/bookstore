@@ -5,7 +5,11 @@ description: This guide will show you how to finally stop the cycle of anxiety, 
 image: books/overcome-anxiety/main
 previewImages:
   - books/overcome-anxiety/main
-snipcart: 9eb52315-271a-45f6-8503-3dcc988425e3
+  - books/overcome-anxiety/prev1
+  - books/overcome-anxiety/prev2
+  - books/overcome-anxiety/prev3
+  - books/overcome-anxiety/prev4
+snipcart: 3d342006-e0f6-4580-9b75-12b38ddf3f6f
 category: Mental Health
 featured: true
 ---

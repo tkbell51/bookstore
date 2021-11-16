@@ -5,7 +5,10 @@ description: Grab the secret blueprint to crushing your goals, to overcoming any
 image: books/bulletproof-mind/main
 previewImages:
   - books/bulletproof-mind/main
-snipcart: 5476e2a9-e9b9-4b3c-9a98-28edb67183f9
+  - books/bulletproof-mind/prev1
+  - books/bulletproof-mind/prev2
+  - books/bulletproof-mind/prev3
+snipcart: 007e8965-23e1-4206-8afa-cdd4be851c41
 category: Personal Growth
 featured: true
 ---

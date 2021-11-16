@@ -1,10 +1,13 @@
 ---
 title: How to Avoid Stress
 price: 14.99
-snipcart: c701239b-87cb-4da8-95d9-ee173f4ad69f
+snipcart: 2192586b-6283-4e44-a54e-1265fd058249
 image: books/how-to-avoid-stress/main
 previewImages:
   - books/how-to-avoid-stress/main
+  - books/how-to-avoid-stress/prev1
+  - books/how-to-avoid-stress/prev2
+  - books/how-to-avoid-stress/prev3
 description: This course will help you deal with most stressful situations and even explain to you how you can de-escalate these sorts of unfortunate events from exploding in your face.
 category: Mental Health
 ---
