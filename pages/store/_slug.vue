@@ -149,7 +149,6 @@ export default {
       seo: {
         title: product.title,
         description: product.description,
-        image: `https://res.cloudinary.com/books2grow/image/upload/v1605819200/books/${product.slug}/main.png`,
       },
       relatedSettings: {
         arrows: true,

@@ -2,13 +2,13 @@
 title: The Abundance Mindset
 price: 14.99
 description: Living an abundant life is available to all individuals on this Earth, and it all depends on the mindset. You will find an abundant, happy, and fulfilling life once you are fully aware of your thoughts and your ability to change your thinking process.
-image: books/abundance-mindset/main
+image: b2g/abundance-mindset/main
 previewImages:
-  - books/abundance-mindset/main
-  - books/abundance-mindset/prev1
-  - books/abundance-mindset/prev2
-  - books/abundance-mindset/prev3
-  - books/abundance-mindset/prev4
+  - b2g/abundance-mindset/main
+  - b2g/abundance-mindset/prev1
+  - b2g/abundance-mindset/prev2
+  - b2g/abundance-mindset/prev3
+  - b2g/abundance-mindset/prev4
 snipcart: b8764304-14db-4500-8190-b0aa65ce9b6f
 category: Personal Growth
 featured: false

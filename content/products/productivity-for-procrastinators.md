@@ -2,13 +2,13 @@
 title: Productivity for Procrastinators
 price: 14.99
 description: The only way you're going to change and improve your productivity is if you take the necessary steps to eliminate the reasons why you may be suffering from a lack of productivity.
-image: books/productivity-for-procrastination/main
+image: b2g/productivity-for-procrastination/main
 previewImages:
-  - books/productivity-for-procrastination/main
-  - books/productivity-for-procrastination/prev1
-  - books/productivity-for-procrastination/prev2
-  - books/productivity-for-procrastination/prev3
-  - books/productivity-for-procrastination/prev4
+  - b2g/productivity-for-procrastination/main
+  - b2g/productivity-for-procrastination/prev1
+  - b2g/productivity-for-procrastination/prev2
+  - b2g/productivity-for-procrastination/prev3
+  - b2g/productivity-for-procrastination/prev4
 snipcart: 91aca8fe-e7fe-423b-b709-df13ff02bfa7
 category: Personal Growth
 featured: false

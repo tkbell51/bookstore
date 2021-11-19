@@ -2,12 +2,12 @@
 title: Bulletproof Mind
 price: 14.99
 description: Grab the secret blueprint to crushing your goals, to overcoming any of life's adversities, and live your best year EVER!
-image: books/bulletproof-mind/main
+image: b2g/bulletproof-mind/main
 previewImages:
-  - books/bulletproof-mind/main
-  - books/bulletproof-mind/prev1
-  - books/bulletproof-mind/prev2
-  - books/bulletproof-mind/prev3
+  - b2g/bulletproof-mind/main
+  - b2g/bulletproof-mind/prev1
+  - b2g/bulletproof-mind/prev2
+  - b2g/bulletproof-mind/prev3
 snipcart: 007e8965-23e1-4206-8afa-cdd4be851c41
 category: Personal Growth
 featured: true

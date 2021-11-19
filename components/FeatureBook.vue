@@ -39,7 +39,6 @@
             :data-item-image="src"
             :data-item-name="product.title"
             :data-item-categories="product.category.name"
-            :daya-item-metadata="{ type: product.type }"
           >
             <Cart class="mr-2" />
 
@@ -65,13 +64,13 @@ export default {
   computed: {
     src() {
       return this.$cloudinary.image.url(this.product.image, {
-        gravity: 'auto:subject',
-        width: '300',
+        gravity: "auto:subject",
+        width: "300",
         height: 200,
-      })
+      });
     },
   },
-}
+};
 </script>
 
 <style lang="scss">

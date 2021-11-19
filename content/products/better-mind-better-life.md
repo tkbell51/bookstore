@@ -2,12 +2,12 @@
 title: Better Mind Better Life
 price: 14.99
 description: Learn ways to deal with stressful situations!
-image: books/bettermindbetterlife/main
+image: b2g/better-mind-better-life/main
 previewImages:
-  - books/bettermindbetterlife/main
-  - books/bettermindbetterlife/prev1
-  - books/bettermindbetterlife/prev2
-  - books/bettermindbetterlife/prev3
+  - b2g/better-mind-better-life/main
+  - b2g/better-mind-better-life/prev1
+  - b2g/better-mind-better-life/prev2
+  - b2g/better-mind-better-life/prev3
 
 snipcart: dd33da90-9c26-49f9-b665-1e609a5705fc
 category: Mental Health

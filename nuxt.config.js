@@ -50,8 +50,12 @@ export default {
   },
   image: {
     cloudinary: {
-      baseURL: 'https://res.cloudinary.com/books2grow/image/upload/',
+      baseURL: 'https://res.cloudinary.com/bwa/image/upload/',
     },
+  },
+  cloudinary: {
+    cloudName: 'bwa',
+    useComponent: true,
   },
   styleResources: {
     scss: ['~/assets/scss/*.scss'],
@@ -82,10 +86,6 @@ export default {
       ],
       brands: ['faDev', 'faInstagram', 'faPinterest'],
     },
-  },
-  cloudinary: {
-    cloudName: 'books2grow',
-    useComponent: true,
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

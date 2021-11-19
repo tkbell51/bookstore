@@ -2,13 +2,13 @@
 title: Happiness Through Self Care
 price: 14.99
 description: Discover how learning the power of self-care can transform your life and make you happier, healthier, and more productive.
-image: books/happiness-self-care/main
+image: b2g/happiness-self-care/main
 previewImages:
-  - books/happiness-self-care/main
-  - books/happiness-self-care/prev1
-  - books/happiness-self-care/prev2
-  - books/happiness-self-care/prev3
-  - books/happiness-self-care/prev4
+  - b2g/happiness-self-care/main
+  - b2g/happiness-self-care/prev1
+  - b2g/happiness-self-care/prev2
+  - b2g/happiness-self-care/prev3
+  - b2g/happiness-self-care/prev4
 snipcart: e55d50ae-beb3-46db-82bf-4afd8f2fc3ab
 category: Personal Growth
 ---

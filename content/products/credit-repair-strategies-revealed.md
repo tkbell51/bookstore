@@ -2,13 +2,13 @@
 title: Credit Repair Strategies Revealed
 price: 14.99
 description: Discover The Insider Secret Manual That Allows You To Repair Credit Score, Enjoy Your Freedom To Get Approved On Any Loans You Wants Even If You Have No Credit Building Experience Or Suffering From Deep Negative Credit History!
-image: books/credit-repair-strategies-revealed/main
+image: b2g/credit-repair-strategies-revealed/main
 previewImages:
-  - books/credit-repair-strategies-revealed/main
-  - books/credit-repair-strategies-revealed/prev1
-  - books/credit-repair-strategies-revealed/prev2
-  - books/credit-repair-strategies-revealed/prev3
-  - books/credit-repair-strategies-revealed/prev4
+  - b2g/credit-repair-strategies-revealed/main
+  - b2g/credit-repair-strategies-revealed/prev1
+  - b2g/credit-repair-strategies-revealed/prev2
+  - b2g/credit-repair-strategies-revealed/prev3
+  - b2g/credit-repair-strategies-revealed/prev4
 snipcart: 76159d48-0188-473d-b723-d8cd08744384
 category: Credit Repair
 featured: false
