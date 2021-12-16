@@ -5,7 +5,7 @@
     </div>
     <div class="container">
       <div
-        class="flex items-center justify-between flex-wrap md:flex-nowrap p-2 relative"
+        class="flex items-center justify-between flex-wrap md:flex-nowrap p-2 pt-6 relative"
       >
         <div class="nav__mobile" @click="toggleMenu">
           <span></span>

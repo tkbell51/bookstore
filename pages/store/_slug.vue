@@ -5,56 +5,10 @@
         <div
           class="product__content flex flex-col md:flex-row flex-wrap items-center md:items-start"
         >
-          <!-- <div class="product__image md:w-1/2 p-6">
-            <PictureTabs :pictures="product.previewImages" />
-          </div> -->
-          <div class="product__image md:w-1/2 p-6">
+          <div class="product__image w-full md:w-1/2 p-6">
             <SlickAsNav :pictures="product.previewImages" />
-            <!-- <VueSlickCarousel ref="c1" :asNavFor="$refs.c2" :focusOnSelect="true">
-
-
-              <div v-for="(image, index) in product.previewImages" :key="index">
-                <div class="w-1/2 mx-auto">
-                  <nuxt-img
-                    v-if="index == product.previewImages.length - 1"
-                    :src="image"
-                    fit="fill"
-                    class="cursor-pointer rounded-lg"
-                  />
-                  <nuxt-img
-                    v-else
-                    provider="cloudinary"
-                    :src="image"
-                    fit="fill"
-                    class="cursor-pointer rounded-lg"
-                  />
-                </div>
-              </div>
-            </VueSlickCarousel>
-            <VueSlickCarousel
-              ref="c2"
-              :asNavFor="$refs.c1"
-              :slidesToShow="4"
-              :focusOnSelect="true"
-            >
-              <div v-for="(image, index) in product.previewImages" :key="index">
-                <nuxt-img
-                  v-if="index == product.previewImages.length - 1"
-                  :src="image"
-                  fit="fill"
-                  class="cursor-pointer rounded-lg"
-                />
-                <nuxt-img
-                  v-else
-                  provider="cloudinary"
-                  :src="image"
-                  fit="fill"
-                  class="cursor-pointer rounded-lg"
-                />
-              </div>
-            </VueSlickCarousel> -->
           </div>
-          <div class="product__meta md:w-1/2 px-4">
+          <div class="product__meta w-full md:w-1/2 px-4">
             <p class="uppercase">{{ product.category }}</p>
             <h1 class="heading-primary mb-4">{{ product.title }}</h1>
             <p class="product__price text-4xl mb-4 font-semibold">${{ product.price }}</p>
@@ -70,8 +24,6 @@
               :data-item-name="product.title"
               :data-item-categories="product.category"
             >
-              <!-- <Cart class="mr-2" color="black" /> -->
-
               Add to cart
             </button>
             <Accordion class="accordion__highlights">

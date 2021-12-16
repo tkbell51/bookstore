@@ -10,7 +10,7 @@
           <div
             v-for="product in featuredProducts()"
             :key="product.slug"
-            class="w-1/2 md:w-1/3 lg:w-1/4 my-4"
+            class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 my-4"
           >
             <ProductCard :product="product" />
           </div>

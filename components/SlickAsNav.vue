@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="book__slick">
     <div>
       <VueSlickCarousel ref="c1" :asNavFor="c2" :focusOnSelect="true">
         <div v-for="(item, index) in pictures" :key="index">
@@ -69,3 +69,11 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.book__slick {
+  .slick-prev:before,
+  .slick-next:before {
+    color: $black;
+  }
+}
+</style>

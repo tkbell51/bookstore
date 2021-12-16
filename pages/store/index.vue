@@ -31,7 +31,10 @@ export default {
 <style lang="scss">
 .store-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
   grid-gap: 1rem;
+  &__item {
+    width: 100%;
+  }
 }
 </style>
