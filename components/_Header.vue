@@ -1,5 +1,8 @@
 <template>
   <header class="header relative shadow-md">
+    <div class="header__sale">
+      <p class="text-center">Buy 3, get 1 FREE, STOREWIDE</p>
+    </div>
     <div class="container">
       <div
         class="flex items-center justify-between flex-wrap md:flex-nowrap p-2 relative"
@@ -17,12 +20,12 @@
 
         <Search class="header__search order-last md:order-none" />
         <div class="flex justify-between gap-1 md:gap-10">
-          <button
+          <!-- <button
             href="#"
             class="snipcart-customer-signin block flex items-center snipcart-btn"
           >
             <svg-icon class="header__user" name="clear-user" />
-          </button>
+          </button> -->
           <button
             class="snipcart-checkout flex items-center buy-btn mx-2 relative snipcart-btn"
           >
@@ -69,12 +72,18 @@ export default {
   width: 100%;
   z-index: 5;
   background: #fff;
-  padding: 1rem 0;
+  padding: 0 0 1rem 0;
 
   &__user {
     fill: $black;
     height: 2.5rem;
     width: 2.5rem;
+  }
+
+  &__sale {
+    background: $light-black;
+    color: $white;
+    padding: 0.5rem 0;
   }
 
   .mobile-menu {

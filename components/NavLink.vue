@@ -12,7 +12,7 @@
             class="nav__link block border-b-2 border-transparent mx-5"
             to="/store"
           >
-            Shop by Categories
+            Categories
             <Fas i="caret-down" />
           </nuxt-link>
           <transition name="dropdown-fade">

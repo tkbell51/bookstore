@@ -3,7 +3,7 @@
     <div class="product__top relative">
       <nuxt-link
         :to="`/store/${product.slug}`"
-        class="product__img-link shadowrelative flex justify-center items-center"
+        class="product__img-link shadow relative flex justify-center items-center"
       >
         <nuxt-img
           provider="cloudinary"
@@ -73,7 +73,8 @@ export default {
   position: relative;
   background: $white;
   @include respond(tab-port) {
-    width: 22rem;
+    width: 20rem;
+    padding: 2rem 1rem;
   }
   &__type {
     position: absolute;

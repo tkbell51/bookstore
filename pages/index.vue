@@ -3,8 +3,24 @@
     <Hero />
     <StoreInfo />
 
+    <section class="section__featured">
+      <div class="container">
+        <h2 class="heading-secondary">Featured Books</h2>
+        <div class="flex flex-wrap">
+          <div
+            v-for="product in featuredProducts()"
+            :key="product.slug"
+            class="w-1/2 md:w-1/3 lg:w-1/4 my-4"
+          >
+            <ProductCard :product="product" />
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section__categories">
       <div class="container">
+        <h2 class="heading-secondary">Categories</h2>
+
         <div class="grid gap-3">
           <NuxtLink
             v-for="category in categories"
@@ -20,14 +36,7 @@
     </section>
     <section class="section__featured-category">
       <div class="container">
-        <h3 class="heading-tertiary text-white">Featured Category</h3>
-        <div class="flex justify-between">
-          <h2 class="heading-primary text-white">Mental Health</h2>
-
-          <NuxtLink class="hover-btn" to="/store/category/mental-health"
-            >View All</NuxtLink
-          >
-        </div>
+        <h2 class="heading-secondary">Featured Category : Mental Health</h2>
         <VueSlickCarousel v-bind="productsSettings">
           <div
             v-for="product in products.filter((p) => p.category === 'Mental Health')"
@@ -36,20 +45,6 @@
             <ProductCard :product="product" />
           </div>
         </VueSlickCarousel>
-      </div>
-    </section>
-    <section class="section__featured">
-      <div class="container">
-        <h2 class="heading-primary">Featured Products</h2>
-        <div class="flex flex-wrap">
-          <div
-            v-for="product in featuredProducts()"
-            :key="product.slug"
-            class="w-1/2 md:w-1/3 lg:w-1/4 my-4"
-          >
-            <ProductCard :product="product" />
-          </div>
-        </div>
       </div>
     </section>
 
@@ -147,7 +142,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .section {
   &__categories {
     .grid.gap-3 {
@@ -163,6 +158,7 @@ export default {
       @apply uppercase shadow hover:shadow-xl w-full flex justify-center items-center  rounded-lg p-8;
       // width: 10rem;
       margin: 0 auto;
+      background: $white;
 
       // filter: blur
       span {
@@ -185,7 +181,11 @@ export default {
   }
 
   &__featured-category {
-    background: center / cover no-repeat url("../assets/img/feature-background.jpg");
+    .slick-prev:before,
+    .slick-next:before {
+      color: $black;
+    }
+    // background: center / cover no-repeat url("../assets/img/feature-background.jpg");
     .hover-btn {
       align-self: flex-start;
     }

@@ -1,7 +1,7 @@
 <template>
   <div class="home-hero">
     <div class="container">
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 py-12">
+      <div class="py-12">
         <VueSlickCarousel v-bind="settings" class="hero__carousel col-span-2">
           <HeroSlide title="Family" image="family" />
           <HeroSlide title="Relationships" image="relationship" />
@@ -10,17 +10,6 @@
           <HeroSlide title="Spiritually" image="spiritual" />
           <HeroSlide title="Mentally" image="mental" />
         </VueSlickCarousel>
-        <div class="col-span-2 md:col-span-1">
-          <div
-            class="home-hero__sale shadow hover:shadow-xl w-full h-full flex justify-center items-center rounded flex flex-col text-white cursor-pointer py-24 md:py-auto"
-          >
-            <span class="text-6xl uppercase font-bold">Buy 3</span>
-            <span class="text-4xl uppercase">Get the 4th</span>
-            <span class="text-6xl uppercase font-bold">Free </span>
-            <span class="text-4xl uppercase">Storewide!</span>
-            <NuxtLink class="hover-btn my-2" to="/store">Shop Now</NuxtLink>
-          </div>
-        </div>
       </div>
     </div>
   </div>

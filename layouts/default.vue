@@ -29,7 +29,7 @@ html {
   }
 }
 body {
-  background: $white;
+  background: $background;
 }
 .overlay {
   position: fixed;
