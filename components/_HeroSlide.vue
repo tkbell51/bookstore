@@ -61,7 +61,7 @@ export default {
   }
 
   &__title {
-    font-size: clamp(6rem, 12vw, 10rem);
+    font-size: clamp(4rem, 10vw, 10rem);
     margin: 2rem auto 8%;
     line-height: 7rem;
     // font-size: 10rem;
