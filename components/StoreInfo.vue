@@ -15,16 +15,16 @@
         <div
           class="store-info__item flex flex-row md:flex-col lg:flex-row items-center gap-5"
         >
-          <Fas i="credit-card" class="md:mr-auto lg:mr-0" />
+          <Fas i="star" class="md:mr-auto lg:mr-0" />
           <div>
-            <h5 class="font-bold">Frequent New Arrivals</h5>
-            <p>Check back every month for new arrivals</p>
+            <h5 class="font-bold">Best Value</h5>
+            <p>Low prices with great information</p>
           </div>
         </div>
         <div
           class="store-info__item flex flex-row md:flex-col lg:flex-row items-center gap-5"
         >
-          <Fas i="star" class="md:mr-auto lg:mr-0" />
+          <Fas i="credit-card" class="md:mr-auto lg:mr-0" />
           <div>
             <h5 class="font-bold">Payment Method</h5>
             <p>100% secured payment options</p>
